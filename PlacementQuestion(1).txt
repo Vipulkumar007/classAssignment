@@ -169,3 +169,43 @@ int main()
 
     return 0;
 }
+
+
+Q.Remove an element
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout<<"Enter the size of the array:";
+    cin>>n;
+    cout<<"Enter the array elements : ";
+    int arr[n];
+    for(int i = 0;i < n;i++){
+        cin>>arr[i];
+        cout<<" ";
+    }
+    cout<<endl;
+    int num;
+    cout<<"Enter the number to delete : ";
+    cin>>num;
+    cout<<endl;
+    int count = 0;
+    
+    for(int i = 0;i < n;i++){
+        if (arr[i] == num){
+            arr[i] = arr[i + 1];
+        }
+        else{
+            count++;
+        }
+    }
+    
+    for(int i = 0;i < count;i++){
+        cout<<arr[i]<<" ";
+    }
+    
+
+    return 0;
+}
